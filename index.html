@@ -143,6 +143,14 @@ footer h2{font-size:clamp(28px,4.5vw,44px);max-width:720px;margin:0 auto 26px}
 </div>
 </section>
 
+<section class="sobre" id="em-alta" hidden>
+<div class="wrap" style="max-width:1080px;text-align:left">
+  <div class="head"><div class="eyebrow">Em alta</div><h2>Em alta na Reforma Tributária</h2><p>Os temas que mais geram dúvidas nas empresas agora.</p></div>
+  <div class="grid" id="altaGrid"></div>
+  <div class="cta-mid"><a class="btn btn-gold" href="https://wa.me/5531996665551?text=Ol%C3%A1%2C%20Hebert!%20Quero%20meu%20Diagn%C3%B3stico%20Fiscal%20Gratuito." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Tirar minhas dúvidas no WhatsApp</a></div>
+</div>
+</section>
+
 <section class="como" id="como-funciona">
 <div class="wrap">
   <div class="head"><div class="eyebrow">Como funciona</div><h2>Simples, em 3 passos</h2><p>Da primeira conversa ao acompanhamento da sua empresa.</p></div>
@@ -170,5 +178,19 @@ footer h2{font-size:clamp(28px,4.5vw,44px);max-width:720px;margin:0 auto 26px}
 </footer>
 
 <a class="float" href="https://wa.me/5531996665551" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#i-wa"/></svg></a>
+<script>
+fetch('temas.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():null}).then(function(d){
+  if(!d||!d.temas||!d.temas.length)return;
+  var g=document.getElementById('altaGrid');
+  d.temas.slice(0,6).forEach(function(t){
+    var c=document.createElement('div');c.className='card';
+    var k=document.createElement('div');k.className='eyebrow';k.style.fontSize='11px';k.textContent=t.categoria||'';
+    var h=document.createElement('h3');h.textContent=t.titulo||'';
+    var p=document.createElement('p');p.textContent=t.resumo||'';
+    c.appendChild(k);c.appendChild(h);c.appendChild(p);g.appendChild(c);
+  });
+  document.getElementById('em-alta').hidden=false;
+}).catch(function(){});
+</script>
 </body>
 </html>
