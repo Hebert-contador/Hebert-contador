@@ -32,6 +32,10 @@ a{color:inherit;text-decoration:none}
 header{position:sticky;top:0;z-index:50;background:rgba(2,44,76,.94);backdrop-filter:blur(8px);border-bottom:1px solid rgba(212,180,106,.25)}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:12px;height:68px}
 .brand{display:flex;align-items:center;gap:10px;color:#fff;font-family:Oswald,sans-serif;font-weight:500;letter-spacing:.5px;font-size:18px;line-height:1.1}
+.navr{display:flex;align-items:center;gap:14px}
+.restrita{color:#fff;font-size:13px;font-weight:600;border:1px solid rgba(212,180,106,.55);border-radius:999px;padding:9px 16px;white-space:nowrap;transition:.2s}
+.restrita:hover{background:rgba(212,180,106,.15);border-color:var(--gold-l)}
+@media(max-width:560px){.restrita span{display:none}.restrita{padding:9px 12px}}
 .brand img{width:38px;height:38px}
 .brand small{display:block;font-family:Montserrat,sans-serif;font-size:10px;letter-spacing:1.6px;color:var(--gold-l);text-transform:uppercase;font-weight:600}
 .hero{background:radial-gradient(900px 500px at 85% 10%,rgba(212,180,106,.16),transparent 60%),linear-gradient(160deg,var(--navy),var(--navy-3));color:#fff;padding:84px 0 96px}
@@ -97,7 +101,10 @@ footer h2{font-size:clamp(28px,4.5vw,44px);max-width:720px;margin:0 auto 26px}
 <header>
 <div class="wrap nav">
   <a class="brand" href="#inicio"><img src="assets/hs-logo-branco-dourado.svg" alt="" width="38" height="38"><span>Hebert Souza<small>Consultor Tributário</small></span></a>
-  <a class="btn btn-gold btn-sm" href="https://wa.me/5531996665551" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg><span>Falar no WhatsApp</span></a>
+  <div class="navr">
+    <a class="restrita" href="https://ferramentas-hebert.hebertbetim.workers.dev/" target="_blank" rel="noopener">🔒 <span>Área restrita</span></a>
+    <a class="btn btn-gold btn-sm" href="https://wa.me/5531996665551" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg><span>Falar no WhatsApp</span></a>
+  </div>
 </div>
 </header>
 
@@ -173,7 +180,7 @@ footer h2{font-size:clamp(28px,4.5vw,44px);max-width:720px;margin:0 auto 26px}
     <a href="https://www.linkedin.com/in/hebert-souza-63a73771" target="_blank" rel="noopener" aria-label="LinkedIn"><svg><use href="#i-in"/></svg></a>
     <a href="https://wa.me/5531996665551" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#i-wa"/></svg></a>
   </div>
-  <div class="copy">© 2026 Hebert Souza - Consultor Tributário. Todos os direitos reservados.<br><a href="https://ferramentas-hebert.hebertbetim.workers.dev/" target="_blank" rel="noopener" style="display:inline-block;margin-top:10px;font-size:12px;font-weight:600;text-decoration:underline;opacity:.85">🔒 Área restrita</a></div>
+  <div class="copy">© 2026 Hebert Souza - Consultor Tributário. Todos os direitos reservados.</div>
 </div>
 </footer>
 
