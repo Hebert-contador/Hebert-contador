@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hebert Souza | Consultor Tributário</title>
+<meta name="description" content="Diagnóstico fiscal gratuito para MEI, Simples Nacional e Lucro Presumido. Proteja o caixa da sua empresa e entenda o impacto da Reforma Tributária.">
+<meta name="theme-color" content="#022c4c">
+<meta property="og:title" content="Hebert Souza | Consultor Tributário">
+<meta property="og:description" content="Quem cuida do imposto da sua empresa? Peça seu Diagnóstico Fiscal Gratuito pelo WhatsApp.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/android-chrome-512x512.png">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Oswald:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#022c4c;--navy-2:#03385f;--navy-3:#011f37;--gold:#b8913a;--gold-l:#d4b46a;--ink:#022c4c;--muted:#5b6470;--bg:#f6f4ee;--wa:#25d366}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Montserrat,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:700;border-radius:999px;padding:14px 26px;font-size:15px;transition:.2s;border:2px solid transparent;cursor:pointer}
+.btn svg{width:20px;height:20px;fill:currentColor;flex:none}
+.btn-gold{background:linear-gradient(135deg,var(--gold-l),var(--gold));color:var(--navy);box-shadow:0 8px 24px rgba(184,145,58,.35)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(184,145,58,.5)}
+.btn-sm{padding:10px 18px;font-size:13px}
+.btn-lg{padding:18px 34px;font-size:16px}
+header{position:sticky;top:0;z-index:50;background:rgba(2,44,76,.94);backdrop-filter:blur(8px);border-bottom:1px solid rgba(212,180,106,.25)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;height:68px}
+.brand{display:flex;align-items:center;gap:10px;color:#fff;font-family:Oswald,sans-serif;font-weight:500;letter-spacing:.5px;font-size:18px;line-height:1.1}
+.brand img{width:38px;height:38px}
+.brand small{display:block;font-family:Montserrat,sans-serif;font-size:10px;letter-spacing:1.6px;color:var(--gold-l);text-transform:uppercase;font-weight:600}
+.hero{background:radial-gradient(900px 500px at 85% 10%,rgba(212,180,106,.16),transparent 60%),linear-gradient(160deg,var(--navy),var(--navy-3));color:#fff;padding:84px 0 96px}
+.hero .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center}
+.tag{display:inline-block;color:var(--gold-l);border:1px solid rgba(212,180,106,.5);border-radius:999px;padding:6px 14px;font-size:12px;letter-spacing:1.4px;text-transform:uppercase;font-weight:600;margin-bottom:22px}
+h1{font-family:Oswald,sans-serif;font-weight:600;font-size:clamp(38px,6vw,64px);line-height:1.08;margin-bottom:20px}
+h1 span{color:var(--gold-l)}
+.hero p{font-size:18px;color:#d8e2ec;max-width:560px;margin-bottom:34px}
+.hero .note{margin-top:16px;font-size:13px;color:#9fb3c6}
+.photo{position:relative;justify-self:center}
+.photo img{width:min(320px,100%);aspect-ratio:1;object-fit:cover;border-radius:50%;border:4px solid var(--gold);box-shadow:0 0 0 12px rgba(212,180,106,.12),0 30px 60px rgba(0,0,0,.4)}
+.badge{position:absolute;bottom:6px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--navy);font-weight:700;font-size:12px;letter-spacing:1px;padding:8px 16px;border-radius:999px;white-space:nowrap}
+section{padding:80px 0}
+.eyebrow{color:var(--gold);font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px}
+h2{font-family:Oswald,sans-serif;font-weight:600;font-size:clamp(28px,4vw,40px);line-height:1.15;margin-bottom:18px}
+.sobre{background:var(--bg)}
+.sobre .wrap{max-width:820px;text-align:center}
+.sobre p{font-size:19px;color:#2b4660}
+.sobre strong{color:var(--navy)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:28px}
+.chips span{background:#fff;border:1px solid rgba(184,145,58,.5);color:var(--navy);padding:8px 16px;border-radius:999px;font-size:13px;font-weight:600}
+.head{text-align:center;max-width:640px;margin:0 auto 44px}
+.head p{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.card{background:#fff;border:1px solid #e6e2d6;border-top:4px solid var(--gold);border-radius:14px;padding:26px 22px;transition:.2s;box-shadow:0 4px 14px rgba(2,44,76,.05)}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(2,44,76,.12)}
+.ico{width:46px;height:46px;border-radius:12px;background:var(--navy);display:grid;place-items:center;margin-bottom:14px}
+.ico svg{width:24px;height:24px;stroke:var(--gold-l);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:16px;margin-bottom:6px}
+.card p{font-size:14px;color:var(--muted)}
+.como{background:var(--navy);color:#fff}
+.como .head p{color:#b9c9d8}
+.como h2{color:#fff}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;counter-reset:s}
+.step{background:rgba(255,255,255,.05);border:1px solid rgba(212,180,106,.3);border-radius:14px;padding:30px 24px;text-align:center}
+.num{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,var(--gold-l),var(--gold));color:var(--navy);font-family:Oswald,sans-serif;font-size:24px;font-weight:600;display:grid;place-items:center;margin:0 auto 16px}
+.step h3{font-size:17px;margin-bottom:8px;color:var(--gold-l)}
+.step p{font-size:14px;color:#c9d6e2}
+.cta-mid{text-align:center;margin-top:44px}
+footer{background:linear-gradient(135deg,var(--gold-l),var(--gold));color:var(--navy);padding:72px 0 30px;text-align:center}
+footer h2{font-size:clamp(28px,4.5vw,44px);max-width:720px;margin:0 auto 26px}
+.btn-navy{background:var(--navy);color:#fff;box-shadow:0 8px 24px rgba(2,44,76,.35)}
+.btn-navy:hover{transform:translateY(-2px);background:var(--navy-2)}
+.social{display:flex;justify-content:center;gap:14px;margin:34px 0 36px}
+.social a{width:52px;height:52px;border-radius:50%;border:2px solid var(--navy);display:grid;place-items:center;transition:.2s}
+.social a:hover{background:var(--navy);color:var(--gold-l);transform:translateY(-3px)}
+.social svg{width:24px;height:24px;fill:currentColor}
+.copy{border-top:1px solid rgba(2,44,76,.25);padding-top:20px;font-size:13px;font-weight:500}
+.float{position:fixed;right:18px;bottom:18px;z-index:60;width:60px;height:60px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 8px 22px rgba(0,0,0,.3);transition:.2s}
+.float:hover{transform:scale(1.08)}
+.float svg{width:32px;height:32px;fill:#fff}
+@media(max-width:820px){.hero{padding:56px 0 70px}.hero .wrap{grid-template-columns:1fr;text-align:center}.hero p{margin-inline:auto}.photo{order:-1}.photo img{width:200px}.brand small{display:none}section{padding:60px 0}}
+@media(max-width:420px){.btn-sm span{display:none}.btn-sm{padding:10px 12px}.btn-lg{padding:16px 22px;font-size:14px}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="i-wa" viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.8 14.12c-.25.69-1.44 1.32-1.98 1.37-.51.05-1 .24-3.37-.7-2.85-1.13-4.65-4.05-4.79-4.24-.14-.19-1.14-1.52-1.14-2.9 0-1.38.72-2.06.98-2.34.25-.28.55-.35.74-.35h.53c.17 0 .4-.06.62.48.23.55.78 1.9.85 2.04.07.14.11.3.02.49-.09.19-.14.3-.28.46-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.71 1.17 1.53 1.9 1.05.93 1.94 1.22 2.22 1.36.28.14.44.12.6-.07.16-.19.7-.82.89-1.1.19-.28.37-.23.62-.14.25.09 1.6.75 1.88.89.28.14.46.21.53.32.07.12.07.67-.18 1.36Z"/></symbol>
+<symbol id="i-ig" viewBox="0 0 24 24"><path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5.25-3.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5Z"/></symbol>
+<symbol id="i-in" viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4V21H3V9.75Zm6.5 0h3.84v1.54h.06c.53-1 1.84-2.07 3.79-2.07 4.05 0 4.8 2.67 4.8 6.13V21h-4v-5.1c0-1.22-.02-2.78-1.7-2.78-1.7 0-1.96 1.32-1.96 2.69V21h-4V9.75Z"/></symbol>
+</svg>
+
+<header>
+<div class="wrap nav">
+  <a class="brand" href="#inicio"><img src="assets/hs-logo-branco-dourado.svg" alt="" width="38" height="38"><span>Hebert Souza<small>Consultor Tributário</small></span></a>
+  <a class="btn btn-gold btn-sm" href="https://wa.me/5531996665551" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg><span>Falar no WhatsApp</span></a>
+</div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+<div class="wrap">
+  <div>
+    <div class="tag">Consultoria Tributária & Fiscal</div>
+    <h1>Quem cuida do <span>imposto</span> da sua empresa?</h1>
+    <p>Proteja o caixa da sua empresa e entenda o impacto da Reforma Tributária. Especialista em MEI, Simples Nacional e Lucro Presumido.</p>
+    <a class="btn btn-gold btn-lg" href="https://wa.me/5531996665551?text=Ol%C3%A1%2C%20Hebert!%20Quero%20meu%20Diagn%C3%B3stico%20Fiscal%20Gratuito." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Quero meu Diagnóstico Fiscal Gratuito</a>
+    <div class="note">Sem compromisso · Resposta direto pelo WhatsApp</div>
+  </div>
+  <div class="photo">
+    <img src="assets/hebert.jpg" alt="Hebert Souza, Contador Tributarista" width="320" height="320">
+    <span class="badge">CRC ATIVO</span>
+  </div>
+</div>
+</section>
+
+<section class="sobre" id="sobre">
+<div class="wrap">
+  <div class="eyebrow">Sobre mim</div>
+  <h2>Formação que sustenta a consultoria</h2>
+  <p>Prazer, <strong>Hebert Souza</strong>. Sou <strong>Contador Tributarista Fiscal (CRC ativo)</strong>, especialista fiscal e <strong>pós-graduado em Reforma Tributária</strong>.</p>
+  <div class="chips"><span>Contador · CRC ativo</span><span>Especialista Fiscal</span><span>Pós-graduado em Reforma Tributária</span></div>
+</div>
+</section>
+
+<section id="servicos">
+<div class="wrap">
+  <div class="head"><div class="eyebrow">Serviços</div><h2>O que eu resolvo</h2><p>Soluções fiscais sob medida para você pagar o imposto certo, sem surpresas.</p></div>
+  <div class="grid">
+    <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg></div><h3>Enquadramento</h3><p>Defina o regime ideal: MEI, Simples Nacional ou Lucro Presumido.</p></div>
+    <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3v18M17 7H9.5a2.5 2.5 0 0 0 0 5h5a2.5 2.5 0 0 1 0 5H7"/></svg></div><h3>Retenções</h3><p>Controle das retenções de impostos em notas e serviços tomados e prestados.</p></div>
+    <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6zM14 2v6h6M9 13h7M9 17h7"/></svg></div><h3>Notas Fiscais</h3><p>Emissão e gestão de Notas Fiscais pelo Portal Nacional.</p></div>
+    <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="m8 9 2 2 4-4M8 16h8"/></svg></div><h3>Obrigações acessórias</h3><p>Declarações e entregas no prazo, evitando multas e pendências.</p></div>
+    <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="m3 17 6-6 4 4 8-8M15 7h6v6"/></svg></div><h3>Planejamento Tributário</h3><p>Estratégia legal para reduzir a carga e proteger o caixa.</p></div>
+    <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 7h13l3 4v6h-2M3 7v10h2M3 17h2m6 0h4"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg></div><h3>ICMS ST</h3><p>Substituição tributária apurada corretamente, sem pagar a mais.</p></div>
+    <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M4 12h16M14 6l6 6-6 6M10 6l-6 6 6 6" opacity=".0"/><path d="M4 8h14l-3-3M20 16H6l3 3"/></svg></div><h3>DIFAL</h3><p>Diferencial de alíquota nas operações interestaduais, sem erro.</p></div>
+    <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Antecipação de impostos</h3><p>Cálculo e prazos das antecipações para evitar autuações.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="como" id="como-funciona">
+<div class="wrap">
+  <div class="head"><div class="eyebrow">Como funciona</div><h2>Simples, em 3 passos</h2><p>Da primeira conversa ao acompanhamento da sua empresa.</p></div>
+  <div class="steps">
+    <div class="step"><div class="num">1</div><h3>Diagnóstico fiscal gratuito</h3><p>Analiso a situação da sua empresa e aponto riscos e oportunidades.</p></div>
+    <div class="step"><div class="num">2</div><h3>Proposta de consultoria</h3><p>Você recebe uma proposta clara, sob medida para o seu negócio.</p></div>
+    <div class="step"><div class="num">3</div><h3>Acompanhamento pontual ou mensal</h3><p>Escolha o formato que cabe na sua rotina e no seu bolso.</p></div>
+  </div>
+  <div class="cta-mid"><a class="btn btn-gold btn-lg" href="https://wa.me/5531996665551?text=Ol%C3%A1%2C%20Hebert!%20Quero%20meu%20Diagn%C3%B3stico%20Fiscal%20Gratuito." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Começar pelo diagnóstico gratuito</a></div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap">
+  <h2>Quer o seu diagnóstico fiscal gratuito? Me chame agora.</h2>
+  <a class="btn btn-navy btn-lg" href="https://wa.me/5531996665551" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Chamar no WhatsApp</a>
+  <div class="social">
+    <a href="https://www.instagram.com/hebert_souza_contador/" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-ig"/></svg></a>
+    <a href="https://www.linkedin.com/in/hebert-souza-63a73771" target="_blank" rel="noopener" aria-label="LinkedIn"><svg><use href="#i-in"/></svg></a>
+    <a href="https://wa.me/5531996665551" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#i-wa"/></svg></a>
+  </div>
+  <div class="copy">© 2026 Hebert Souza - Consultor Tributário. Todos os direitos reservados.</div>
+</div>
+</footer>
+
+<a class="float" href="https://wa.me/5531996665551" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#i-wa"/></svg></a>
+</body>
+</html>
