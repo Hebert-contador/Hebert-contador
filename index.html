@@ -66,9 +66,9 @@ h2{font-family:Oswald,sans-serif;font-weight:600;font-size:clamp(28px,4vw,40px);
 .ico svg{width:24px;height:24px;stroke:var(--gold-l);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .card h3{font-size:16px;margin-bottom:6px}
 .card p{font-size:14px;color:var(--muted)}
-#altaGrid{grid-template-columns:repeat(3,1fr)}
-@media(max-width:900px){#altaGrid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:600px){#altaGrid{grid-template-columns:1fr}}
+#altaGrid,#servGrid{grid-template-columns:repeat(3,1fr)}
+@media(max-width:900px){#altaGrid,#servGrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){#altaGrid,#servGrid{grid-template-columns:1fr}}
 .tcard{cursor:pointer;display:flex;flex-direction:column;text-align:left;font:inherit;color:inherit;width:100%}
 .tcard p{flex:1}
 .tcard .ver{margin-top:14px;font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.3px}
@@ -160,8 +160,10 @@ footer h2{font-size:clamp(28px,4.5vw,44px);max-width:720px;margin:0 auto 26px}
 
 <section id="servicos">
 <div class="wrap">
-  <div class="head"><div class="eyebrow">Serviços</div><h2>O que eu resolvo</h2><p>Soluções fiscais sob medida para você pagar o imposto certo, sem surpresas.</p></div>
-  <div class="grid">
+  <div class="head"><div class="eyebrow">Consultoria fiscal e tributária</div><h2>Serviços</h2><p>Soluções fiscais sob medida para você pagar o imposto certo, sem surpresas.</p></div>
+  <div class="grid" id="servGrid">
+    <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></div><h3>Consultoria fiscal</h3><p>Orientação direta sobre os impostos da sua empresa, para decidir com segurança.</p></div>
+    <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M7 15h4"/></svg></div><h3>Parcelamento de débitos</h3><p>Análise e negociação de débitos fiscais para regularizar a empresa com parcelas que cabem no caixa.</p></div>
     <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg></div><h3>Enquadramento</h3><p>Defina o regime ideal: MEI, Simples Nacional ou Lucro Presumido.</p></div>
     <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3v18M17 7H9.5a2.5 2.5 0 0 0 0 5h5a2.5 2.5 0 0 1 0 5H7"/></svg></div><h3>Retenções</h3><p>Controle das retenções de impostos em notas e serviços tomados e prestados.</p></div>
     <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6zM14 2v6h6M9 13h7M9 17h7"/></svg></div><h3>Notas Fiscais</h3><p>Emissão e gestão de Notas Fiscais pelo Portal Nacional.</p></div>
