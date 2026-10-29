@@ -1,9 +1,35 @@
 {
- "atualizado": "2026-10-28",
+ "atualizado": "2026-10-29",
  "temas": [
-  {"categoria": "Reforma Tributária", "titulo": "Reforma Tributária: o que muda na sua empresa", "resumo": "Cinco tributos viram três. Entenda o novo desenho dos impostos sobre o consumo."},
-  {"categoria": "Reforma Tributária", "titulo": "Simples Nacional e a Reforma: continua existindo?", "resumo": "O Simples continua, mas a Reforma muda a forma de competir com quem está no regime regular."},
-  {"categoria": "Reforma Tributária", "titulo": "Split payment: o imposto sai antes de o dinheiro chegar", "resumo": "Com o split payment, parte do valor da venda vai direto para o Fisco no pagamento."},
-  {"categoria": "Retenções", "titulo": "Retenção na fonte de PIS, Cofins e CSLL: 4,65%", "resumo": "Prestou serviço para outra empresa? Pode haver retenção federal na sua nota."}
+  {
+   "categoria": "Reforma Tributária",
+   "titulo": "Reforma Tributária: o que muda na sua empresa",
+   "resumo": "Cinco tributos viram três. Entenda o novo desenho dos impostos sobre o consumo."
+  },
+  {
+   "categoria": "Reforma Tributária",
+   "titulo": "Simples Nacional e a Reforma: continua existindo?",
+   "resumo": "O Simples continua, mas a Reforma muda a forma de competir com quem está no regime regular."
+  },
+  {
+   "categoria": "Reforma Tributária",
+   "titulo": "Split payment: o imposto sai antes de o dinheiro chegar",
+   "resumo": "Com o split payment, parte do valor da venda vai direto para o Fisco no pagamento."
+  },
+  {
+   "categoria": "Reforma Tributária",
+   "titulo": "Crédito amplo: quem compra gera crédito",
+   "resumo": "A não cumulatividade ampla muda o cálculo do imposto: o crédito passa a valer para quase tudo que é da atividade."
+  },
+  {
+   "categoria": "Notas Fiscais",
+   "titulo": "NFS-e Padrão Nacional: o que você precisa saber",
+   "resumo": "A nota de serviço está caminhando para um padrão único em todo o país."
+  },
+  {
+   "categoria": "ICMS",
+   "titulo": "DIFAL: a diferença que pega muita empresa",
+   "resumo": "Comprou de outro estado para uso ou ativo? Pode ter diferencial de alíquota a recolher."
+  }
  ]
 }
