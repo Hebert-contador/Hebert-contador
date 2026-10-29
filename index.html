@@ -66,6 +66,30 @@ h2{font-family:Oswald,sans-serif;font-weight:600;font-size:clamp(28px,4vw,40px);
 .ico svg{width:24px;height:24px;stroke:var(--gold-l);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .card h3{font-size:16px;margin-bottom:6px}
 .card p{font-size:14px;color:var(--muted)}
+#altaGrid{grid-template-columns:repeat(3,1fr)}
+@media(max-width:900px){#altaGrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){#altaGrid{grid-template-columns:1fr}}
+.tcard{cursor:pointer;display:flex;flex-direction:column;text-align:left;font:inherit;color:inherit;width:100%}
+.tcard p{flex:1}
+.tcard .ver{margin-top:14px;font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.3px}
+.tcard:focus-visible{outline:3px solid var(--gold-l);outline-offset:2px}
+.cmodal{position:fixed;inset:0;z-index:100;background:rgba(1,31,55,.88);display:none;align-items:center;justify-content:center;padding:16px}
+.cmodal.on{display:flex}
+.cbox{position:relative;width:min(560px,100%);background:linear-gradient(160deg,var(--navy),var(--navy-3));border:1px solid rgba(212,180,106,.5);border-radius:20px;color:#fff;padding:34px 30px 26px;box-shadow:0 30px 70px rgba(0,0,0,.5)}
+.cx{position:absolute;top:10px;right:12px;width:38px;height:38px;border-radius:50%;border:0;background:rgba(255,255,255,.1);color:#fff;font-size:22px;cursor:pointer}
+.cx:hover{background:rgba(212,180,106,.3)}
+.ccat{color:var(--gold-l);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px}
+.cview{min-height:300px;display:flex;flex-direction:column;justify-content:center;touch-action:pan-y}
+.ctit{font-family:Oswald,sans-serif;font-weight:600;font-size:clamp(26px,5vw,34px);line-height:1.15;margin-bottom:16px;color:#fff}
+.ctxt{font-size:17px;line-height:1.6;color:#d8e2ec}
+.cnav{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:22px}
+.cnav button{width:44px;height:44px;border-radius:50%;border:1px solid rgba(212,180,106,.6);background:transparent;color:var(--gold-l);font-size:20px;cursor:pointer}
+.cnav button:hover:not(:disabled){background:rgba(212,180,106,.2)}
+.cnav button:disabled{opacity:.3;cursor:default}
+.cdots{display:flex;gap:7px;align-items:center;flex-wrap:wrap;justify-content:center}
+.cdots i{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.28);cursor:pointer}
+.cdots i.on{background:var(--gold-l);transform:scale(1.25)}
+.ccnt{text-align:center;font-size:12px;color:#9fb3c6;margin-top:10px}
 .como{background:var(--navy);color:#fff}
 .como .head p{color:#b9c9d8}
 .como h2{color:#fff}
@@ -198,19 +222,68 @@ footer h2{font-size:clamp(28px,4.5vw,44px);max-width:720px;margin:0 auto 26px}
 </footer>
 
 <a class="float" href="https://wa.me/5531996665551" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#i-wa"/></svg></a>
+<div class="cmodal" id="cmodal" role="dialog" aria-modal="true" aria-label="Tema em carrossel">
+  <div class="cbox">
+    <button class="cx" id="cclose" type="button" aria-label="Fechar">×</button>
+    <div class="ccat" id="ccat"></div>
+    <div class="cview"><div class="ctit" id="ctit"></div><div class="ctxt" id="ctxt"></div><div id="cact"></div></div>
+    <div class="cnav"><button id="cprev" type="button" aria-label="Anterior">‹</button><div class="cdots" id="cdots"></div><button id="cnext" type="button" aria-label="Próximo">›</button></div>
+    <div class="ccnt" id="ccnt"></div>
+  </div>
+</div>
 <script>
 fetch('temas.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():null}).then(function(d){
   if(!d||!d.temas||!d.temas.length)return;
   var g=document.getElementById('altaGrid');
   d.temas.slice(0,6).forEach(function(t){
-    var c=document.createElement('div');c.className='card';
+    var c=document.createElement('button');c.type='button';c.className='card tcard';
     var k=document.createElement('div');k.className='eyebrow';k.style.fontSize='11px';k.textContent=t.categoria||'';
     var h=document.createElement('h3');h.textContent=t.titulo||'';
     var p=document.createElement('p');p.textContent=t.resumo||'';
-    c.appendChild(k);c.appendChild(h);c.appendChild(p);g.appendChild(c);
+    var v=document.createElement('div');v.className='ver';v.textContent='Ver em carrossel →';
+    c.appendChild(k);c.appendChild(h);c.appendChild(p);c.appendChild(v);
+    c.onclick=function(){abre(t)};
+    g.appendChild(c);
   });
   document.getElementById('em-alta').hidden=false;
 }).catch(function(){});
+
+/* carrossel do tema */
+var M=document.getElementById('cmodal'),cur=0,S=[],TT=null;
+function monta(t){
+  var s=[{t:t.titulo||'',x:t.resumo||''}];
+  (t.slides||[]).forEach(function(x){s.push({t:x.t||'',x:x.x||''})});
+  s.push({cta:1,t:'Quer saber como isso afeta a sua empresa?',x:'Faça o diagnóstico fiscal gratuito: conversa de 20 a 30 minutos, sem compromisso.'});
+  return s;
+}
+function mostra(){
+  var s=S[cur];
+  document.getElementById('ccat').textContent=TT.categoria||'';
+  document.getElementById('ctit').textContent=s.t;
+  document.getElementById('ctxt').textContent=s.x;
+  var a=document.getElementById('cact');a.innerHTML='';
+  if(s.cta){
+    var l=document.createElement('a');l.className='btn btn-gold';l.target='_blank';l.rel='noopener';
+    l.href='https://wa.me/5531996665551?text='+encodeURIComponent('Olá, Hebert! Vi o tema "'+(TT.titulo||'')+'" no seu site e quero entender como isso afeta a minha empresa.');
+    l.textContent='Chamar no WhatsApp';a.style.marginTop='22px';a.appendChild(l);
+  }else a.style.marginTop='0';
+  document.getElementById('cprev').disabled=cur===0;
+  document.getElementById('cnext').disabled=cur===S.length-1;
+  document.getElementById('ccnt').textContent=(cur+1)+' de '+S.length;
+  var d=document.getElementById('cdots');d.innerHTML='';
+  S.forEach(function(_,i){var e=document.createElement('i');if(i===cur)e.className='on';e.onclick=function(){cur=i;mostra()};d.appendChild(e)});
+}
+function abre(t){TT=t;S=monta(t);cur=0;M.classList.add('on');document.body.style.overflow='hidden';mostra();document.getElementById('cnext').focus()}
+function fecha(){M.classList.remove('on');document.body.style.overflow=''}
+function vai(n){if(n>=0&&n<S.length){cur=n;mostra()}}
+document.getElementById('cprev').onclick=function(){vai(cur-1)};
+document.getElementById('cnext').onclick=function(){vai(cur+1)};
+document.getElementById('cclose').onclick=fecha;
+M.addEventListener('click',function(e){if(e.target===M)fecha()});
+document.addEventListener('keydown',function(e){if(!M.classList.contains('on'))return;if(e.key==='Escape')fecha();if(e.key==='ArrowRight')vai(cur+1);if(e.key==='ArrowLeft')vai(cur-1)});
+var x0=null;
+M.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
+M.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;x0=null;if(Math.abs(dx)>50)vai(cur+(dx<0?1:-1))},{passive:true});
 </script>
 </body>
 </html>
